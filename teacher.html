@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup Kuis Horor Fiqh - Guru</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <div class="container">
+        <h1>Setup Kuis Fiqh: Qadha & Qadhar</h1>
+        <p>Materi: Fiqh Qadha dan Qadhar</p>
+
+        <form id="quizSetupForm">
+            <h2>Soal Pilihan Ganda (10 Soal)</h2>
+            <div id="multipleChoiceQuestions">
+                </div>
+
+            <h2>Soal Esai (5 Soal)</h2>
+            <div id="essayQuestions">
+                </div>
+
+            <button type="submit">Simpan & Publikasi Kuis</button>
+        </form>
+
+        <div id="publicationLink" class="hidden" style="margin-top: 20px; padding:10px; background-color:#444;">
+            <h3>Kuis Siap Dipublikasikan!</h3>
+            <p>Bagikan link berikut kepada siswa (salin dan berikan path ke file `student_login.html`):</p>
+            <input type="text" id="generatedLink" readonly style="width: 100%;">
+            <p style="font-size: 0.8em; color: #aaa;">
+                Catatan: Karena ini adalah versi demo client-side, "publikasi" berarti siswa membuka file <code>student_login.html</code> di browser mereka setelah Anda menyimpan soal.
+                Data soal disimpan di localStorage browser Anda.
+            </p>
+        </div>
+
+        <div id="leaderboard" style="margin-top: 30px;">
+            <h2>Papan Peringkat Siswa</h2>
+            <button id="refreshLeaderboardBtn">Segarkan Papan Peringkat</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Peringkat</th>
+                        <th>Nama</th>
+                        <th>Kelas</th>
+                        <th>Skor</th>
+                        <th>Waktu Selesai</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboardBody">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="teacher.js"></script>
+</body>
+</html>
