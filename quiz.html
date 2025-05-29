@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Horor Fiqh</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <div class="container">
+        <h1 id="quizTitle">Memuat Kuis...</h1>
+        <div id="studentInfo" style="text-align: center; margin-bottom: 15px;"></div>
+        
+        <div id="quizArea">
+            <div id="questionContainer" class="question-block">
+                </div>
+            <div id="optionsContainer">
+                </div>
+            <button id="nextButton">Soal Berikutnya</button>
+        </div>
+
+        <div id="resultArea" class="hidden">
+            <h2>Hasil Kuis Anda</h2>
+            <p>Nama: <span id="resultName"></span></p>
+            <p>Kelas: <span id="resultClass"></span></p>
+            <p>Skor Anda: <strong id="resultScore" style="font-size: 1.5em;"></strong></p>
+            <p id="resultMessage"></p>
+            <button onclick="window.location.href='student_login.html'">Coba Lagi</button>
+        </div>
+    </div>
+
+    <div id="jumpscare-container" class="hidden">
+        <img id="jumpscare-image" src="assets/jumpscare.png" alt="JUMPSCARE!">
+        <audio id="jumpscare-audio" src="assets/jumpscare_sound.mp3"></audio>
+    </div>
+
+    <div id="applause-container" class="hidden">
+        <p>SELAMAT! SKOR SEMPURNA!</p>
+        <audio id="applause-audio" src="assets/applause_sound.mp3"></audio>
+    </div>
+
+    <script src="student.js"></script>
+</body>
+</html>
